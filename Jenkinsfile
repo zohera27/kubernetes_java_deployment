@@ -24,5 +24,16 @@ pipeline{
                 }
             }
         }
+
+        stage('Maven Test'){
+
+            steps{
+
+                script{
+
+                    maven.mvntest(mavenhome, toolchain)
+                }
+            }
+        }
     }
 }
