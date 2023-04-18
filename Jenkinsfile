@@ -37,8 +37,22 @@ pipeline{
                     }
 
                 }
+                dir('shopfront'){
 
-                    
+                    script{
+
+                        maven.mvntest(mavenhome, toolchain)
+                    }
+
+                }
+                dir('stockmanager'){
+
+                    script{
+
+                        maven.mvntest(mavenhome, toolchain)
+                    }
+
+                }                    
             }
             
         }
