@@ -29,7 +29,7 @@ pipeline{
 
             steps{
 
-                workdir('productcatalogue'){
+                dir('productcatalogue'){
 
                     script{
 
