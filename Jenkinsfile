@@ -1,5 +1,7 @@
-@Library('Jenkins_Shared_Library') _
+@Librar('Jenkins_Shared_Library') _
 
+def mavenhome = '/opt/apache-maven-3.9.1/bin'
+def toolchain = '/opt/apache-maven-3.9.1/conf/toolchains.xml'
 
 pipeline{
 
@@ -7,17 +9,18 @@ pipeline{
 
     stages{
 
-        stage('GIT Checkout'){
+        stage('GIT CheckOut'){
 
             steps{
 
                 script{
 
-                    gitcheckout.git(
+                    gitcheckout.git([
 
                         branch:'main',
                         url:'https://github.com/zohera27/kubernetes_java_deployment.git'
-                    )
+                    ])                     
+                    
                 }
             }
         }
