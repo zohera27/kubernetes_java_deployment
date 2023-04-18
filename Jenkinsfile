@@ -27,13 +27,17 @@ pipeline{
 
         stage('Maven Test'){
 
-            steps{
+            dir('productcatalogue') {
 
-                script{
+                steps{
 
-                    maven.mvntest(mavenhome, toolchain)
+                    script{
+
+                        maven.mvntest(mavenhome, toolchain)
+                    }
                 }
             }
         }
+            
     }
 }
