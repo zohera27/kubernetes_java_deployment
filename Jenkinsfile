@@ -23,5 +23,32 @@ pipeline{
                 }
             }
         }
+        stage('Maven Test') {
+
+            steps{
+
+                dir('productcatalogue') {
+
+                    script {
+
+                        mvn.mvntest(mavenhome, toolchain)
+                    }
+                }
+                dir('shopfront') {
+
+                    script {
+
+                        mvn.mvntest(mavenhome, toolchain)
+                    }
+                }
+                dir('stockmanager') {
+
+                    script {
+
+                        mvn.mvntest(mavenhome, toolchain)
+                    }
+                }
+            }
+        }
     }
 }
