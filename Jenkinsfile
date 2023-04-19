@@ -116,6 +116,20 @@ pipeline{
                         sonar.qualitygate(Sonarqubecredentials)
                     }
                 }
+                dir('shopfront'){
+
+                    script{
+
+                        sonar.qualitygate(Sonarqubecredentials)
+                    }
+                }
+                dir('stockmanager'){
+
+                    script{
+
+                        sonar.qualitygate(Sonarqubecredentials)
+                    }
+                }
             }
         }
     }
