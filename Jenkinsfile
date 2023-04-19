@@ -89,6 +89,33 @@ pipeline{
                         sonar.codeanalysis(Sonarqubecredentials, mavenhome, toolchain)
                     }
                 }
+                dir('shopfront'){
+
+                    script{
+
+                        sonar.codeanalysis(Sonarqubecredentials, mavenhome, toolchain)
+                    }
+                }
+                dir('stockmanager'){
+
+                    script{
+
+                        sonar.codeanalysis(Sonarqubecredentials, mavenhome, toolchain)
+                    }
+                }
+            }
+        }
+        stage('SonarQube:Quality Gate'){
+
+            steps{
+
+                dir('productcatalogue'){
+
+                    script{
+
+                        sonar.qualitygate(Sonarqubecredentials)
+                    }
+                }
             }
         }
     }
