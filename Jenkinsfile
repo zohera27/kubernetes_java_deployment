@@ -50,5 +50,32 @@ pipeline{
                 }
             }
         }
+        stage('Unit Integration Test') {
+
+            steps{
+
+                dir('productcatalogue') {
+
+                    script {
+
+                        mvn.mvnverify(mavenhome, toolchain)
+                    }
+                }
+                dir('shopfront') {
+
+                    script {
+
+                        mvn.mvnverify(mavenhome, toolchain)
+                    }
+                }
+                dir('stockmanager') {
+
+                    script {
+
+                        mvn.mvnverify(mavenhome, toolchain)
+                    }
+                }
+            }
+        }
     }
 }
