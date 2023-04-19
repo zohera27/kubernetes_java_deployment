@@ -132,5 +132,18 @@ pipeline{
                 }
             }
         }
+        stage('Maven Build'){
+            
+            steps{
+                
+                dir('productcatalogue'){
+
+                    script{
+
+                        mvn.mvnbuild(mavenhome, toolchain)
+                    }
+                }
+            }
+        }
     }
 }
