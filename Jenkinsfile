@@ -2,6 +2,7 @@
 
 def mavenhome = '/opt/apache-maven-3.9.1/bin'
 def toolchain = '/opt/apache-maven-3.9.1/conf/toolchains.xml'
+def Sonarqubecredentials='sonar-api'
 
 pipeline{
 
@@ -73,6 +74,19 @@ pipeline{
                     script {
 
                         mvn.mvnverify(mavenhome, toolchain)
+                    }
+                }
+            }
+        }
+        stage('SonarQube:Static Code Analysis'){
+
+            steps{
+
+                dir('productcatalogue'){
+
+                    script{
+
+                        sonar.codeanalysis(Sonarqubecredentials, mavenhome, toolchain)
                     }
                 }
             }
