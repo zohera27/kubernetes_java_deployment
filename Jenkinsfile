@@ -143,6 +143,20 @@ pipeline{
                         mvn.mvnbuild(mavenhome, toolchain)
                     }
                 }
+                dir('shopfront'){
+
+                    script{
+
+                        mvn.mvnbuild(mavenhome, toolchain)
+                    }
+                }
+                dir('stockmanager'){
+
+                    script{
+
+                        mvn.mvnbuild(mavenhome, toolchain)
+                    }
+                }
             }
         }
     }
