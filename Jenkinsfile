@@ -92,8 +92,14 @@ pipeline{
 
         stage('JDK 8 stage') {
 
-            sh '$JAVA8_HOME/bin/java -version'
-            sh 'JAVA_HOME=$JAVA8_HOME ${MAVEN_HOME}/bin/mvn --version'
+            steps {
+
+                script {
+
+                    sh '$JAVA8_HOME/bin/java -version'
+                    sh 'JAVA_HOME=$JAVA8_HOME ${MAVEN_HOME}/bin/mvn --version'
+                }            
+            }
         }
         /*
         stage('Unit Test maven') {
