@@ -137,7 +137,7 @@ pipeline{
                 
             }
         }
-        /*
+        
         stage('Integration Test maven') {
 
          when { expression { params.action == 'Create' } }    
@@ -148,7 +148,7 @@ pipeline{
 
                     script{
 
-                        maven.mvnverify(mavenhome, toolchain)        
+                        mvn.mvnverify(JAVA8_HOME)        
 
                     }
                 }
@@ -157,7 +157,7 @@ pipeline{
 
                     script{
 
-                        maven.mvnverify(mavenhome, toolchain)        
+                        mvn.mvnverify(JAVA8_HOME)        
 
                     }
                 }
@@ -166,14 +166,14 @@ pipeline{
 
                     script{
 
-                        maven.mvnverify(mavenhome, toolchain)        
+                        mvn.mvnverify(JAVA8_HOME)        
 
                     }
                 }
                 
             }
         }
-
+        /*
         stage('Static Code Analysis: Sonarqube'){
 
          when { expression { params.action == 'Create' }  }
