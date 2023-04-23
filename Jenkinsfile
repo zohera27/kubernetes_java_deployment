@@ -89,7 +89,7 @@ pipeline{
 
 
         }
-
+        /*
         stage('JDK 8 stage') {
 
             steps {
@@ -101,10 +101,10 @@ pipeline{
                 }            
             }
         }
-        /*
+        */
         stage('Unit Test maven') {
 
-         when { expression { params.action == 'Create' } }    
+         // when { expression { params.action == 'Create' } }    
 
             steps{
 
@@ -112,11 +112,11 @@ pipeline{
 
                     script{
 
-                        maven.mvntest(mavenhome, toolchain)        
+                        mvn.mvntest(JAVA8_HOME)        
 
                     }
                 }
-
+                /*
                 dir('shopfront') {
 
                     script{
@@ -134,10 +134,10 @@ pipeline{
 
                     }
                 }
-                
+                */
             }
         }
-
+        /*
         stage('Integration Test maven') {
 
          when { expression { params.action == 'Create' } }    
