@@ -116,7 +116,7 @@ pipeline{
 
                     }
                 }
-                /*
+                
                 dir('shopfront') {
 
                     script{
@@ -134,7 +134,7 @@ pipeline{
 
                     }
                 }
-                */
+                
             }
         }
         /*
