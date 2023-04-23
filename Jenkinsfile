@@ -72,7 +72,7 @@ pipeline{
 
                 script{
 
-                    gitcheckout(
+                    git.gitcheckout(
 
                         branch: 'main',
                         url: 'https://github.com/zohera27/kubernetes_java_deployment.git'
