@@ -121,7 +121,7 @@ pipeline{
 
                     script{
 
-                        maven.mvntest(mavenhome, toolchain)        
+                        mvn.mvntest(JAVA8_HOME)        
 
                     }
                 }
@@ -130,7 +130,7 @@ pipeline{
 
                     script{
 
-                        maven.mvntest(mavenhome, toolchain)        
+                        mvn.mvntest(JAVA8_HOME)        
 
                     }
                 }
