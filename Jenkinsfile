@@ -1,12 +1,15 @@
 @Library('Jenkins_Shared_Library') _
 
-def mavenhome = '/opt/apache-maven-3.9.1/bin'
-def toolchain = '/opt/apache-maven-3.9.1/conf/toolchains.xml'
-
 pipeline{
     
     agent any
 
+    tools{
+
+        jdk 'jdk8'
+        maven 'maven'
+    }
+    /*
     parameters{
         
         choice(
@@ -52,6 +55,11 @@ pipeline{
         )
         
     }
+    */
+    environment{
+
+        JAVA8_HOME = "${tool 'jdk8'}"
+    }
 
     stages{
 
@@ -82,6 +90,12 @@ pipeline{
 
         }
 
+        stage('JDK 8 stage') {
+
+            sh '$JAVA8_HOME/bin/java -version'
+            sh 'JAVA_HOME=$JAVA8_HOME ${MAVEN_HOME}/bin/mvn --version'
+        }
+        /*
         stage('Unit Test maven') {
 
          when { expression { params.action == 'Create' } }    
@@ -375,6 +389,6 @@ pipeline{
             }
 
         }
-    
+        */
     }   
 }    
