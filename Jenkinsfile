@@ -210,10 +210,10 @@ pipeline{
 
             }
         }
-        /*
+        
         stage('QG Satus Check: Sonarqube'){
 
-         when { expression { params.action == 'Create' }  }
+         // when { expression { params.action == 'Create' }  }
 
             steps{
 
@@ -221,7 +221,7 @@ pipeline{
 
                     script{
 
-                        def SonarQubecredentialId = 'sonar-api'
+                        def SonarQubecredentialId = 'sonarqube'
                         sonarqube.qualitygate(SonarQubecredentialId)
                     }
                 }
@@ -230,7 +230,7 @@ pipeline{
 
                     script{
 
-                        def SonarQubecredentialId = 'sonar-api'
+                        def SonarQubecredentialId = 'sonarqube'
                         sonarqube.qualitygate(SonarQubecredentialId)
                     }
                 }
@@ -239,14 +239,14 @@ pipeline{
 
                     script{
 
-                        def SonarQubecredentialId = 'sonar-api'
+                        def SonarQubecredentialId = 'sonarqube'
                         sonarqube.qualitygate(SonarQubecredentialId)
                     }
                 }
 
             }
         }
-
+        /*
         stage('Maven Build : maven'){
 
          when { expression { params.action == 'Create' }  }
