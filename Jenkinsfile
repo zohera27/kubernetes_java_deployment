@@ -59,6 +59,7 @@ pipeline{
     environment{
 
         JAVA8_HOME = "${tool 'JDK8'}"
+        JAVA11_HOME = "${tool 'JDK8'}"
     }
 
     stages{
@@ -185,7 +186,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA11_HOME)
                     }
                 }
 
@@ -194,7 +195,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA11_HOME)
                     }
                 }
 
@@ -203,7 +204,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA11_HOME)
                     }
                 }
 
