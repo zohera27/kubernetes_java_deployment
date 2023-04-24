@@ -59,7 +59,7 @@ pipeline{
     environment{
 
         JAVA8_HOME = "${tool 'JDK8'}"
-        JAVA11_HOME = "${tool 'JDK8'}"
+        JAVA11_HOME = "${tool 'JDK11'}"
     }
 
     stages{
