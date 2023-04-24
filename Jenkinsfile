@@ -66,7 +66,7 @@ pipeline{
 
     stages{
 
-        /*
+        
         stage('Git Checkout') {
 
          // when { expression { params.action == 'Create' } }    
@@ -92,8 +92,8 @@ pipeline{
 
 
         }
-        */
         
+        /*
         stage('JDK 8 stage') {
 
             steps {
@@ -105,8 +105,8 @@ pipeline{
                 }            
             }
         }
+        */
         
-        /*
         stage('Unit Test maven') {
 
          // when { expression { params.action == 'Create' } }    
@@ -142,7 +142,7 @@ pipeline{
                 
             }
         }
-        
+        /*
         stage('Integration Test maven') {
 
          // when { expression { params.action == 'Create' } }    
