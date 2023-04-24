@@ -185,7 +185,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
@@ -194,7 +194,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
@@ -203,7 +203,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
+                        sonar.codeanalysis(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
