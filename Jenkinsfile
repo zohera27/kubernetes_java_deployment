@@ -222,7 +222,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonarqube.qualitygate(SonarQubecredentialId)
+                        sonar.qualitygate(SonarQubecredentialId)
                     }
                 }
 
@@ -231,7 +231,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonarqube.qualitygate(SonarQubecredentialId)
+                        sonar.qualitygate(SonarQubecredentialId)
                     }
                 }
 
@@ -240,7 +240,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonarqube'
-                        sonarqube.qualitygate(SonarQubecredentialId)
+                        sonar.qualitygate(SonarQubecredentialId)
                     }
                 }
 
