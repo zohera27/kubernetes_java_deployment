@@ -3,14 +3,14 @@
 pipeline{
     
     agent any
-
+    /*
     tools{
 
         jdk 'JDK8'
         jdk 'JDK11'
         maven 'maven'
     }
-    /*
+    
     parameters{
         
         choice(
@@ -65,7 +65,7 @@ pipeline{
 
     stages{
 
-
+        /*
         stage('Git Checkout') {
 
          // when { expression { params.action == 'Create' } }    
@@ -91,7 +91,8 @@ pipeline{
 
 
         }
-        /*
+        */
+        
         stage('JDK 8 stage') {
 
             steps {
@@ -103,7 +104,8 @@ pipeline{
                 }            
             }
         }
-        */
+        
+        /*
         stage('Unit Test maven') {
 
          // when { expression { params.action == 'Create' } }    
@@ -280,7 +282,7 @@ pipeline{
 
             }
         }
-        /*
+        
         stage('Docker Image Build') {
 
          when { expression { params.action == 'Create' }  }    
