@@ -173,10 +173,10 @@ pipeline{
                 
             }
         }
-        /*
+        
         stage('Static Code Analysis: Sonarqube'){
 
-         when { expression { params.action == 'Create' }  }
+         // when { expression { params.action == 'Create' }  }
 
             steps{
 
@@ -185,7 +185,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, mavenhome, toolchain)
+                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
@@ -194,7 +194,7 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, mavenhome, toolchain)
+                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
@@ -203,13 +203,13 @@ pipeline{
                     script{
 
                         def SonarQubecredentialId = 'sonar-api'
-                        sonarqube.staticcode(SonarQubecredentialId, mavenhome, toolchain)
+                        sonarqube.staticcode(SonarQubecredentialId, JAVA8_HOME)
                     }
                 }
 
             }
         }
-
+        /*
         stage('QG Satus Check: Sonarqube'){
 
          when { expression { params.action == 'Create' }  }
