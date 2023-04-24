@@ -247,10 +247,10 @@ pipeline{
 
             }
         }
-        /*
+        
         stage('Maven Build : maven'){
 
-         when { expression { params.action == 'Create' }  }
+         // when { expression { params.action == 'Create' }  }
 
             steps{
 
@@ -258,7 +258,7 @@ pipeline{
 
                     script{
 
-                        maven.mvnbuild(mavenhome, toolchain)
+                        mvn.mvnbuild(JAVA8_HOME)
                     }
                 }
 
@@ -266,7 +266,7 @@ pipeline{
 
                     script{
 
-                        maven.mvnbuild(mavenhome, toolchain)
+                        mvn.mvnbuild(JAVA8_HOME)
                     }
                 }
 
@@ -274,13 +274,13 @@ pipeline{
 
                     script{
 
-                        maven.mvnbuild(mavenhome, toolchain)
+                        mvn.mvnbuild(JAVA8_HOME)
                     }
                 }
 
             }
         }
-
+        /*
         stage('Docker Image Build') {
 
          when { expression { params.action == 'Create' }  }    
