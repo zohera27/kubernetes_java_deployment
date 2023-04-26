@@ -288,7 +288,7 @@ pipeline{
         
         stage('Docker Image Build') {
 
-         when { expression { params.action == 'Create' }  }    
+         // when { expression { params.action == 'Create' }  }    
 
             steps{
 
