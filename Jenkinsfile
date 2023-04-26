@@ -61,7 +61,7 @@ pipeline{
 
         JAVA8_HOME = "${tool 'JDK8'}"
         JAVA11_HOME = "${tool 'JDK11'}"
-        MAVEN_HOME = "${tool 'maven'}"
+        MAVEN_HOME = "${tool 'MAVEN'}"
     }
 
     stages{
