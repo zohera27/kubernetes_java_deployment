@@ -107,7 +107,7 @@ pipeline{
             }
         }
         */
-                
+        /*        
         stage('Unit Test maven') {
 
          // when { expression { params.action == 'Create' } }    
@@ -179,6 +179,7 @@ pipeline{
                 
             }
         }
+        */
         /*
         stage('Static Code Analysis: Sonarqube'){
 
@@ -252,7 +253,7 @@ pipeline{
             }
         }
         */
-        
+        /*
         stage('Maven Build : maven'){
 
          // when { expression { params.action == 'Create' }  }
@@ -319,7 +320,7 @@ pipeline{
                 }
             }
         }
-        
+        */
         /*
         stage('Docker Image Scan: trivy') {
 
@@ -353,7 +354,7 @@ pipeline{
             }    
 
         }
-
+        */
         stage('Docker Image Push : DockerHub') {
 
          when { expression { params.action == 'Create' }  }    
@@ -387,7 +388,8 @@ pipeline{
 
 
         }
-
+        
+        /*
         stage('Docker Image Cleanup') {
 
          when { expression { params.action == 'Create' } }
