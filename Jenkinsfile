@@ -105,6 +105,7 @@ pipeline{
                 }            
             }
         }
+        */
                 
         stage('Unit Test maven') {
 
@@ -141,7 +142,7 @@ pipeline{
                 
             }
         }
-        
+        /*
         stage('Integration Test maven') {
 
          // when { expression { params.action == 'Create' } }    
