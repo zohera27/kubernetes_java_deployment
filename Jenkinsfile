@@ -355,6 +355,7 @@ pipeline{
 
         }
         */
+        /*
         stage('Docker Image Push : DockerHub') {
 
          when { expression { params.action == 'Create' }  }    
@@ -388,7 +389,7 @@ pipeline{
 
 
         }
-        
+        */
         /*
         stage('Docker Image Cleanup') {
 
@@ -406,5 +407,12 @@ pipeline{
 
         }
         */
+        stage('Check MicroK8s Version') {
+
+            steps{
+
+                sh '/snap/bin/microk8s version'
+            }
+        }
     }   
 }    
