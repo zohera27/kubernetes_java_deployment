@@ -12,6 +12,13 @@ pipeline{
     }
     */
     
+    environment{
+
+        JAVA8_HOME = "${tool 'JDK8'}"
+        JAVA11_HOME = "${tool 'JDK11'}"
+        MAVEN_HOME = "${tool 'MAVEN'}"
+    }
+    /*
     parameters{
         
         choice(
@@ -57,13 +64,7 @@ pipeline{
         )
         
     }
-    
-    environment{
-
-        JAVA8_HOME = "${tool 'JDK8'}"
-        JAVA11_HOME = "${tool 'JDK11'}"
-        MAVEN_HOME = "${tool 'MAVEN'}"
-    }
+    */
 
     stages{
 
@@ -407,12 +408,6 @@ pipeline{
 
         }
         */
-        stage('Check MicroK8s Version') {
-
-            steps{
-
-                sh '/snap/bin/microk8s version'
-            }
-        }
+        
     }   
 }    
