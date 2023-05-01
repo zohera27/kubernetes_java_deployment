@@ -68,7 +68,7 @@ pipeline{
 
     stages{
 
-        /*
+        
         stage('Git Checkout') {
 
          // when { expression { params.action == 'Create' } }    
@@ -94,7 +94,7 @@ pipeline{
 
 
         }
-        */
+        
         /*
         stage('JDK 8 stage') {
 
