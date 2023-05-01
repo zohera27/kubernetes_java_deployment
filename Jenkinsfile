@@ -18,7 +18,7 @@ pipeline{
         JAVA11_HOME = "${tool 'JDK11'}"
         MAVEN_HOME = "${tool 'MAVEN'}"
     }
-    /*
+    
     parameters{
         
         choice(
@@ -64,14 +64,14 @@ pipeline{
         )
         
     }
-    */
+    
 
     stages{
 
         
         stage('Git Checkout') {
 
-         // when { expression { params.action == 'Create' } }    
+         when { expression { params.action == 'Create' } }    
 
             steps{
 
@@ -108,10 +108,10 @@ pipeline{
             }
         }
         */
-        /*        
+               
         stage('Unit Test maven') {
 
-         // when { expression { params.action == 'Create' } }    
+         when { expression { params.action == 'Create' } }    
 
             steps{
 
@@ -147,7 +147,7 @@ pipeline{
         
         stage('Integration Test maven') {
 
-         // when { expression { params.action == 'Create' } }    
+         when { expression { params.action == 'Create' } }    
 
             steps{
 
@@ -180,7 +180,7 @@ pipeline{
                 
             }
         }
-        */
+        
         /*        
         stage('Static Code Analysis: Sonarqube'){
 
@@ -254,10 +254,10 @@ pipeline{
             }
         }
         */
-        /*
+        
         stage('Maven Build : maven'){
 
-         // when { expression { params.action == 'Create' }  }
+         when { expression { params.action == 'Create' }  }
 
             steps{
 
@@ -287,11 +287,11 @@ pipeline{
 
             }
         }
-        */
-        /*
+        
+        
         stage('Docker Image Build') {
 
-         // when { expression { params.action == 'Create' }  }    
+         when { expression { params.action == 'Create' }  }    
 
             steps{
 
@@ -322,7 +322,7 @@ pipeline{
                 }
             }
         }
-        */
+        
         /*
         stage('Docker Image Scan: trivy') {
 
@@ -357,7 +357,7 @@ pipeline{
 
         }
         */
-        /*
+        
         stage('Docker Image Push : DockerHub') {
 
          when { expression { params.action == 'Create' }  }    
@@ -391,7 +391,7 @@ pipeline{
 
 
         }
-        */
+        
         /*
         stage('Docker Image Cleanup') {
 
@@ -409,7 +409,7 @@ pipeline{
 
         }
         */
-        
+        /*
         stage('Deploying App to kubernetes')
         {
             steps {
@@ -427,5 +427,6 @@ pipeline{
 
             }
         }
+        */
     }   
 }    
