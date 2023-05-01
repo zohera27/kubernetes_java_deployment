@@ -418,7 +418,7 @@ pipeline{
 
                     script{
 
-                        kubernetesDeploy(configs: "productcatalogue-service.yaml", kubeconfigId: "kubernetes")
+                        kubernetesDeploy(configs: "shopfront-service.yaml", kubeconfigId: "kubernetes")
                     }
                 }
 
