@@ -409,7 +409,7 @@ pipeline{
 
         }
         */
-        /*
+        
         stage('Deploying App to kubernetes')
         {
             steps {
@@ -427,6 +427,6 @@ pipeline{
 
             }
         }
-        */
+        
     }   
 }    
