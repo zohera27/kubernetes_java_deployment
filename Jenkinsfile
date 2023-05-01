@@ -409,5 +409,20 @@ pipeline{
         }
         */
         
+        stage('Deploying App to kubernetes')
+        {
+            steps {
+
+                dir('kubernetes'){
+
+                    script{
+
+                        kubernetesDeploy(configs: "productcatalogue-service.yaml", kubeconfigId: "kubernetes")
+                    }
+                }
+
+
+            }
+        }
     }   
 }    
