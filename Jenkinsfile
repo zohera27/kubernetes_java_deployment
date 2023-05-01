@@ -108,7 +108,7 @@ pipeline{
             }
         }
         */
-        /*       
+               
         stage('Unit Test maven') {
 
          when { expression { params.action == 'Create' } }    
@@ -180,7 +180,7 @@ pipeline{
                 
             }
         }
-        */
+        
         /*        
         stage('Static Code Analysis: Sonarqube'){
 
@@ -254,7 +254,7 @@ pipeline{
             }
         }
         */
-        /*
+        
         stage('Maven Build : maven'){
 
          when { expression { params.action == 'Create' }  }
@@ -287,7 +287,7 @@ pipeline{
 
             }
         }
-        */
+        
         
         stage('Docker Image Build') {
 
@@ -357,7 +357,7 @@ pipeline{
 
         }
         */
-        /*
+        
         stage('Docker Image Push : DockerHub') {
 
          when { expression { params.action == 'Create' }  }    
@@ -391,7 +391,7 @@ pipeline{
 
 
         }
-        */
+        
         /*
         stage('Docker Image Cleanup') {
 
@@ -409,7 +409,7 @@ pipeline{
 
         }
         */
-        /*
+        
         stage('Deploying App to kubernetes')
         {
             steps {
@@ -427,6 +427,6 @@ pipeline{
 
             }
         }
-        */
+        
     }   
 }    
