@@ -53,7 +53,7 @@ pipeline{
 
             name: 'ImageTag',
             description: 'Image Tag for Docker Build',
-            defaultValue: 'v1'
+            defaultValue: 'latest'
         )        
 
         string(
@@ -357,7 +357,7 @@ pipeline{
 
         }
         */
-        /*
+        
         stage('Docker Image Push : DockerHub') {
 
          when { expression { params.action == 'Create' }  }    
@@ -391,7 +391,7 @@ pipeline{
 
 
         }
-        */
+        
         /*
         stage('Docker Image Cleanup') {
 
