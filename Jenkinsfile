@@ -418,9 +418,9 @@ pipeline{
 
                     script{
 
-                        kubernetesDeploy(configs: "shopfront-service.yaml", kubeconfigId: "jenkins")
-                        kubernetesDeploy(configs: "productcatalogue-service.yaml", kubeconfigId: "jenkins")
-                        kubernetesDeploy(configs: "stockmanager-service.yaml", kubeconfigId: "jenkins")
+                        kubernetesDeploy(configs: "shopfront-service.yaml", kubeconfigId: "kubernetes")
+                        kubernetesDeploy(configs: "productcatalogue-service.yaml", kubeconfigId: "kubernetes")
+                        kubernetesDeploy(configs: "stockmanager-service.yaml", kubeconfigId: "kubernetes")
                     }
                 }
 
