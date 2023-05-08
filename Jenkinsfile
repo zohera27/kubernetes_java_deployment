@@ -14,8 +14,8 @@ pipeline{
     
     environment{
 
-        JAVA8_HOME = "${tool 'JDK8'}"
-        JAVA11_HOME = "${tool 'JDK11'}"
+        JAVA8_HOME = "${tool 'JAVA8'}"
+        JAVA11_HOME = "${tool 'JAVA11'}"
         MAVEN_HOME = "${tool 'MAVEN'}"
     }
     
