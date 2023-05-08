@@ -412,6 +412,9 @@ pipeline{
               
         stage('Deploying App to kubernetes')
         {
+
+         when { expression { params.action == 'Create' } }
+             
             steps {
 
                 dir('kubernetes'){
